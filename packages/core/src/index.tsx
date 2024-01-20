@@ -29,7 +29,7 @@ import { usePressability } from './vendor/Pressability'
 
 // adds extra types to View/Stack/Text:
 
-type RNExclusiveViewProps = Omit<RNViewProps, keyof StackProps>
+type RNExclusiveViewProps = Omit<RNViewProps, keyof StackNonStyleProps>
 export interface RNTamaguiViewNonStyleProps
   extends StackNonStyleProps,
     RNExclusiveViewProps {}
@@ -256,17 +256,16 @@ export const Text = WebText as any as RNTamaguiText
 // easily test type declaration output and if it gets messy:
 
 // export const X = styled(WebView, {
-//   // variants: {
-//   //   abc: {
-//   //     true: {
-//   //     },
-//   //   },
-//   // } as const,
+//   variants: {
+//     abc: {
+//       true: {},
+//     },
+//   } as const,
 // })
 
 // export const Y = styled(X, {
 //   variants: {
-//     abc: {
+//     zys: {
 //       true: {},
 //     },
 //   } as const,

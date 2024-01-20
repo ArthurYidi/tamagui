@@ -2,7 +2,8 @@ import type { GestureResponderHandlers, LayoutChangeEvent } from 'react-native'
 
 type OnLayout = ((event: LayoutChangeEvent) => void) | undefined
 
-type RNExtraProps = {
+export interface RNExtraProps {
+  focusable?: boolean
   dataSet?: Record<string, string | number | undefined | null>
   onScrollShouldSetResponder?: unknown
   onScrollShouldSetResponderCapture?: unknown
@@ -25,7 +26,6 @@ export interface RNViewProps extends GestureResponderHandlers, RNExtraProps {
 
 export interface RNTextProps extends RNExtraProps {
   dir?: 'ltr' | 'rtl' | 'auto'
-  focusable?: boolean
 }
 
 // KEEP IN SYNC WITH ^

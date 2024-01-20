@@ -822,14 +822,17 @@ export type GetProps<A extends StylableComponent> = A extends {
     __tamaDefer: true;
 } ? GetFinalProps<NonStyledProps, BaseStyles & VariantProps> : Props : A extends TamaguiReactElement<infer Props> ? Props : A extends ComponentType<infer Props> ? GetGenericComponentTamaguiProps<Props> : A extends new (props: infer Props) => any ? GetGenericComponentTamaguiProps<Props> : {};
 export type GetNonStyledProps<A> = A extends {
-    __tama: [any, any, infer A, any, any, any];
-} ? A : {};
+    __tama: [any, any, infer B, any, any, any];
+} ? B : {};
 export type GetBaseStyles<A> = A extends {
-    __tama: [any, any, any, infer A, any, any];
-} ? A : {};
+    __tama: [any, any, any, infer B, any, any];
+} ? B : {};
 export type GetStyledVariants<A> = A extends {
-    __tama: [any, any, any, any, infer A, any];
-} ? A : {};
+    __tama: [any, any, any, any, infer B, any];
+} ? B : {};
+export type GetStaticConfig<A> = A extends {
+    __tama: [any, any, any, any, any, infer B];
+} ? B : A;
 type GetGenericComponentTamaguiProps<P> = P & Omit<'textAlign' extends keyof P ? TextProps : StackProps, keyof P>;
 export type StaticComponentObject<Props, Ref, NonStyledProps, BaseStyles extends Object, VariantProps, ParentStaticProperties> = {
     staticConfig: StaticConfig;

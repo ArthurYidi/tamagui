@@ -1638,20 +1638,28 @@ export type GetProps<A extends StylableComponent> = A extends {
         : {}
 
 export type GetNonStyledProps<A> = A extends {
-  __tama: [any, any, infer A, any, any, any]
+  __tama: [any, any, infer B, any, any, any]
 }
-  ? A
+  ? B
   : {}
+
 export type GetBaseStyles<A> = A extends {
-  __tama: [any, any, any, infer A, any, any]
+  __tama: [any, any, any, infer B, any, any]
 }
-  ? A
+  ? B
   : {}
+
 export type GetStyledVariants<A> = A extends {
-  __tama: [any, any, any, any, infer A, any]
+  __tama: [any, any, any, any, infer B, any]
 }
-  ? A
+  ? B
   : {}
+
+export type GetStaticConfig<A> = A extends {
+  __tama: [any, any, any, any, any, infer B]
+}
+  ? B
+  : A
 
 type GetGenericComponentTamaguiProps<P> = P &
   Omit<'textAlign' extends keyof P ? TextProps : StackProps, keyof P>

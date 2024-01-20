@@ -1,6 +1,6 @@
 import { StyledContext } from './helpers/createStyledContext';
 import type { GetRef } from './interfaces/GetRef';
-import type { GetBaseStyles, GetNonStyledProps, GetProps, GetStyledVariants, GetVariantValues, StaticConfig, StylableComponent, TamaguiComponent, ThemeValueByCategory, VariantDefinitions, VariantSpreadFunction } from './types';
+import type { GetBaseStyles, GetNonStyledProps, GetProps, GetStaticConfig, GetStyledVariants, GetVariantValues, StaticConfig, StylableComponent, TamaguiComponent, ThemeValueByCategory, VariantDefinitions, VariantSpreadFunction } from './types';
 type AreVariantsUndefined<Variants> = Required<Variants> extends {
     _isEmpty: 1;
 } ? true : false;
@@ -17,6 +17,6 @@ export declare function styled<ParentComponent extends StylableComponent, Varian
     __tama: any;
 } ? {
     __tamaDefer: true;
-} : GetProps<ParentComponent>, GetRef<ParentComponent>, GetNonStyledProps<ParentComponent>, GetBaseStyles<ParentComponent> & (StyledStaticConfig["acceptTokens"] extends Object ? { [Key in keyof StyledStaticConfig["acceptTokens"]]: ThemeValueByCategory<StyledStaticConfig["acceptTokens"][Key]>; } : {}), AreVariantsUndefined<Variants> extends true ? GetStyledVariants<ParentComponent> : AreVariantsUndefined<GetStyledVariants<ParentComponent>> extends true ? Exclude<AreVariantsUndefined<Variants> extends true ? {} : GetVariantAcceptedValues<Variants>, "_isEmpty"> : { [Key_1 in Exclude<keyof GetStyledVariants<ParentComponent>, "_isEmpty"> | Exclude<keyof (AreVariantsUndefined<Variants> extends true ? {} : GetVariantAcceptedValues<Variants>), "_isEmpty">]?: (Key_1 extends keyof GetStyledVariants<ParentComponent> ? GetStyledVariants<ParentComponent>[Key_1] : undefined) | (Key_1 extends keyof (AreVariantsUndefined<Variants> extends true ? {} : GetVariantAcceptedValues<Variants>) ? (AreVariantsUndefined<Variants> extends true ? {} : GetVariantAcceptedValues<Variants>)[Key_1] : undefined) | undefined; }, ParentComponent>;
+} : GetProps<ParentComponent>, GetRef<ParentComponent>, GetNonStyledProps<ParentComponent>, GetBaseStyles<ParentComponent> & (StyledStaticConfig["acceptTokens"] extends Object ? { [Key in keyof StyledStaticConfig["acceptTokens"]]: ThemeValueByCategory<StyledStaticConfig["acceptTokens"][Key]>; } : {}), AreVariantsUndefined<Variants> extends true ? GetStyledVariants<ParentComponent> : AreVariantsUndefined<GetStyledVariants<ParentComponent>> extends true ? Omit<AreVariantsUndefined<Variants> extends true ? {} : GetVariantAcceptedValues<Variants>, "_isEmpty"> : { [Key_1 in Exclude<keyof GetStyledVariants<ParentComponent>, "_isEmpty"> | Exclude<keyof (AreVariantsUndefined<Variants> extends true ? {} : GetVariantAcceptedValues<Variants>), "_isEmpty">]?: (Key_1 extends keyof GetStyledVariants<ParentComponent> ? GetStyledVariants<ParentComponent>[Key_1] : undefined) | (Key_1 extends keyof (AreVariantsUndefined<Variants> extends true ? {} : GetVariantAcceptedValues<Variants>) ? (AreVariantsUndefined<Variants> extends true ? {} : GetVariantAcceptedValues<Variants>)[Key_1] : undefined) | undefined; }, GetStaticConfig<ParentComponent>>;
 export {};
 //# sourceMappingURL=styled.d.ts.map

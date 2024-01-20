@@ -1,7 +1,7 @@
 import { GetProps, RadiusTokens, SizeTokens, StackProps, ThemeValueFallback } from '@tamagui/core';
 import React from 'react';
 import { Image as RNImage } from 'react-native';
-declare const StyledImage: import("@tamagui/core").TamaguiComponent<import("react-native").ImageProps & Omit<StackProps, keyof import("react-native").ImageProps>, RNImage, {}, {}, {}, typeof RNImage>;
+declare const StyledImage: import("@tamagui/core").TamaguiComponent<import("react-native").ImageProps & Omit<StackProps, keyof import("react-native").ImageProps>, RNImage, {}, {}, Omit<{}, "_isEmpty">, typeof RNImage>;
 type StyledImageProps = Omit<GetProps<typeof StyledImage>, 'borderRadius'> & {
     borderRadius?: RadiusTokens;
 };

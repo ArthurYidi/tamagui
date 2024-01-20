@@ -6,8 +6,8 @@ import { getReactNativeConfig } from './setupReactNative'
 import type {
   GetBaseStyles,
   GetNonStyledProps,
-  GetStyledProps,
   GetProps,
+  GetStaticConfig,
   GetStyledVariants,
   GetVariantValues,
   StaticConfig,
@@ -17,6 +17,16 @@ import type {
   VariantDefinitions,
   VariantSpreadFunction,
 } from './types'
+
+type Expand<T> = T extends object
+  ? T extends infer O
+    ? { [K in keyof O]: O[K] }
+    : never
+  : T
+
+type UnionToIntersection<U> = Expand<
+  (U extends any ? (k: U) => void : never) extends (k: infer I) => void ? I : never
+>
 
 type AreVariantsUndefined<Variants> =
   // because we pass in the Generic variants which for some reason has this :)
@@ -57,11 +67,10 @@ export function styled<
   type OurVariantProps = AreVariantsUndefined<Variants> extends true
     ? {}
     : GetVariantAcceptedValues<Variants>
-
   type MergedVariants = AreVariantsUndefined<Variants> extends true
     ? ParentVariants
     : AreVariantsUndefined<ParentVariants> extends true
-      ? Exclude<OurVariantProps, '_isEmpty'>
+      ? Omit<OurVariantProps, '_isEmpty'>
       : {
           // exclude _isEmpty as it no longer is empty
           [Key in Exclude<keyof ParentVariants | keyof OurVariantProps, '_isEmpty'>]?:
@@ -94,7 +103,7 @@ export function styled<
     ParentNonStyledProps,
     ParentStylesBase & CustomTokenProps,
     MergedVariants,
-    ParentComponent
+    GetStaticConfig<ParentComponent>
   >
 
   // validate not using a variant over an existing valid style

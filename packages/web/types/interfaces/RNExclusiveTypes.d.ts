@@ -1,6 +1,7 @@
 import type { GestureResponderHandlers, LayoutChangeEvent } from 'react-native';
 type OnLayout = ((event: LayoutChangeEvent) => void) | undefined;
-type RNExtraProps = {
+export interface RNExtraProps {
+    focusable?: boolean;
     dataSet?: Record<string, string | number | undefined | null>;
     onScrollShouldSetResponder?: unknown;
     onScrollShouldSetResponderCapture?: unknown;
@@ -14,14 +15,13 @@ type RNExtraProps = {
         download?: boolean;
     };
     elevationAndroid?: number | string;
-};
+}
 export interface RNViewProps extends GestureResponderHandlers, RNExtraProps {
     rel?: any;
     download?: any;
 }
 export interface RNTextProps extends RNExtraProps {
     dir?: 'ltr' | 'rtl' | 'auto';
-    focusable?: boolean;
 }
 export type RNOnlyProps = 'onStartShouldSetResponder' | 'dataSet' | 'onScrollShouldSetResponder' | 'onScrollShouldSetResponderCapture' | 'onSelectionChangeShouldSetResponder' | 'onSelectionChangeShouldSetResponderCapture' | 'onLayout' | 'href' | 'hrefAttrs' | 'elevationAndroid' | 'rel' | 'download' | 'dir' | 'focusable' | 'onStartShouldSetResponder' | 'onMoveShouldSetResponder' | 'onResponderEnd' | 'onResponderGrant' | 'onResponderReject' | 'onResponderMove' | 'onResponderRelease' | 'onResponderStart' | 'onResponderTerminationRequest' | 'onResponderTerminate' | 'onStartShouldSetResponderCapture' | 'onMoveShouldSetResponderCapture';
 export {};
