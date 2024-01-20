@@ -6,6 +6,7 @@ import { getReactNativeConfig } from './setupReactNative'
 import { MergePreservingOptional } from './type-utils'
 import type {
   GetBaseStyles,
+  GetFinalProps,
   GetNonStyledProps,
   GetProps,
   GetStaticConfig,
@@ -21,6 +22,29 @@ import type {
 } from './types'
 import { View } from './views/View'
 
+// const Input = (props: { color: 'red' }) => null
+// const Y = styled(
+//   Input,
+//   {
+//     variants: {
+//       ok: {
+//         true: {
+
+//           padding: 0,
+//         }
+//       },
+//     },
+//   },
+//   {
+//     isText: true,
+//     acceptTokens: {
+//       color: 'color',
+//     },
+//   }
+// )
+
+// const X = <Y color="red" hoverStyle={{  }} />
+
 type AreVariantsUndefined<Variants> =
   // because we pass in the Generic variants which for some reason has this :)
   Required<Variants> extends { _isEmpty: 1 } ? true : false
@@ -35,8 +59,8 @@ type GetVariantAcceptedValues<V> = V extends Object
 
 export function styled<
   ParentComponent extends StylableComponent,
-  Variants extends VariantDefinitions<ParentComponent>,
-  StyledStaticConfig extends StaticConfigPublic = {},
+  StyledStaticConfig extends StaticConfigPublic,
+  Variants extends VariantDefinitions<ParentComponent, StyledStaticConfig>,
 >(
   ComponentIn: ParentComponent,
   // this should be Partial<GetProps<ParentComponent>> but causes excessively deep type issues
@@ -91,7 +115,10 @@ export function styled<
   type StyledComponent = TamaguiComponent<
     ParentComponent extends { __tama: any }
       ? { __tamaDefer: true }
-      : MergePreservingOptional<GetProps<ParentComponent>, CustomTokenProps>,
+      : MergePreservingOptional<
+          GetProps<ParentComponent>,
+          CustomTokenProps & MergedVariants
+        >,
     GetRef<ParentComponent>,
     ParentNonStyledProps,
     ParentStylesBase & CustomTokenProps,

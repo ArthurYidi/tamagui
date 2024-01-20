@@ -672,7 +672,7 @@ export type SpacerPropsBase = {
 
 type SpacerOwnProps = SpacerPropsBase &
   //
-  WithThemeShorthandsPseudosMediaAnimation<SpacerPropsBase>
+  WithThemeShorthandsPseudosMedia<SpacerPropsBase>
 
 export type SpacerProps = Omit<StackProps, 'flex' | 'direction' | 'size'> &
   //
@@ -1388,7 +1388,7 @@ export type WithThemeShorthandsAndPseudos<A extends Object> = WithThemeAndShorth
 //
 // ... media queries and animations
 //
-export type WithThemeShorthandsPseudosMediaAnimation<A extends Object> =
+export type WithThemeShorthandsPseudosMedia<A extends Object> =
   WithThemeShorthandsAndPseudos<A> & WithMediaProps<WithThemeShorthandsAndPseudos<A>>
 
 /**
@@ -1508,8 +1508,7 @@ export interface StackNonStyleProps
   style?: StyleProp<LooseCombinedObjects<React.CSSProperties, ViewStyle>>
 }
 
-export type StackStyleProps =
-  WithThemeShorthandsPseudosMediaAnimation<StackStylePropsBase>
+export type StackStyleProps = WithThemeShorthandsPseudosMedia<StackStylePropsBase>
 
 export type StackProps = StackNonStyleProps & StackStyleProps
 
@@ -1533,7 +1532,7 @@ export interface TextNonStyleProps
   style?: StyleProp<LooseCombinedObjects<React.CSSProperties, TextStyle>>
 }
 
-export type TextStyleProps = WithThemeShorthandsPseudosMediaAnimation<TextStylePropsBase>
+export type TextStyleProps = WithThemeShorthandsPseudosMedia<TextStylePropsBase>
 
 export type TextProps = TextNonStyleProps & TextStyleProps
 
@@ -1579,9 +1578,7 @@ export type GetFinalProps<NonStyleProps, StylePropsBase> = Omit<
   NonStyleProps,
   keyof StylePropsBase
 > &
-  (StylePropsBase extends Object
-    ? WithThemeShorthandsPseudosMediaAnimation<StylePropsBase>
-    : {})
+  (StylePropsBase extends Object ? WithThemeShorthandsPseudosMedia<StylePropsBase> : {})
 
 export type TamaguiComponent<
   Props = any,
@@ -1886,11 +1883,25 @@ export type SpreadKeys =
 
 export type VariantDefinitions<
   Parent extends StylableComponent = TamaguiComponent,
-  MyProps extends Object = GetProps<Parent>,
+  StaticConfig extends StaticConfigPublic = {},
+  MyProps extends Object = Partial<GetStyleableProps<Parent, StaticConfig['isText']>>,
   Val = any,
 > = VariantDefinitionFromProps<MyProps, Val> & {
   _isEmpty?: 1
 }
+
+export type GetStyleableProps<
+  A extends StylableComponent,
+  IsText extends boolean | undefined,
+> = A extends {
+  __tama: [infer Props, any, any, infer BaseStyles, infer VariantProps, any]
+}
+  ? Props extends { __tamaDefer: true }
+    ? GetFinalProps<{}, BaseStyles & VariantProps>
+    : Props
+  : WithThemeShorthandsPseudosMedia<
+      IsText extends true ? TextStylePropsBase : StackStylePropsBase
+    >
 
 export type VariantDefinitionFromProps<MyProps, Val> = MyProps extends Object
   ? {

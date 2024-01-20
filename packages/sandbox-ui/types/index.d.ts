@@ -11,8 +11,8 @@ export declare const Test14Component: import("tamagui").TamaguiComponent<{
     __tamaDefer: true;
 }, import("tamagui").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/web").StackStylePropsBase, {
     elevation?: number | import("tamagui").SizeTokens | undefined;
-    fullscreen?: boolean | undefined;
     fullbleed?: boolean | undefined;
+    fullscreen?: boolean | undefined;
 }, {}>;
 export declare const TestBorderExtraction: import("tamagui").TamaguiComponent<{
     __tamaDefer: true;

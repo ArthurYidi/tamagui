@@ -6,6 +6,7 @@ export declare const ProgressIndicatorFrame: import("@tamagui/core").TamaguiComp
 }, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -14,7 +15,6 @@ export declare const ProgressIndicatorFrame: import("@tamagui/core").TamaguiComp
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -23,6 +23,7 @@ type ProgressIndicatorProps = GetProps<typeof ProgressIndicatorFrame>;
 declare const ProgressIndicator: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -31,13 +32,13 @@ declare const ProgressIndicator: import("@tamagui/core").TamaguiComponent<import
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
 }>, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & void, import("@tamagui/core").StackStylePropsBase, {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -46,7 +47,6 @@ declare const ProgressIndicator: import("@tamagui/core").TamaguiComponent<import
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -56,6 +56,7 @@ export declare const ProgressFrame: import("@tamagui/core").TamaguiComponent<{
 }, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -64,7 +65,6 @@ export declare const ProgressFrame: import("@tamagui/core").TamaguiComponent<{
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -78,6 +78,7 @@ type ProgressProps = GetProps<typeof ProgressFrame> & {
 declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -86,14 +87,14 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
     size?: import("@tamagui/core").SizeTokens | undefined;
-}>, `$${string}` | `$${number}` | `$theme-${string}` | `$theme-${number}` | "elevation" | "unstyled" | keyof import("@tamagui/core").RNTamaguiViewNonStyleProps | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size" | keyof import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+}>, `$${string}` | `$${number}` | `$theme-${string}` | `$theme-${number}` | "elevation" | "unstyled" | "backgrounded" | keyof import("@tamagui/core").RNTamaguiViewNonStyleProps | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "radiused" | "padded" | "chromeless" | "size" | keyof import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -102,39 +103,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
-    radiused?: boolean | undefined;
-    padded?: boolean | undefined;
-    chromeless?: boolean | "all" | undefined;
-    size?: import("@tamagui/core").SizeTokens | undefined;
-}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-    unstyled?: boolean | undefined;
-    transparent?: boolean | undefined;
-    fullscreen?: boolean | undefined;
-    circular?: boolean | undefined;
-    hoverTheme?: boolean | undefined;
-    pressTheme?: boolean | undefined;
-    focusTheme?: boolean | undefined;
-    elevate?: boolean | undefined;
-    bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
-    radiused?: boolean | undefined;
-    padded?: boolean | undefined;
-    chromeless?: boolean | "all" | undefined;
-    size?: import("@tamagui/core").SizeTokens | undefined;
-}>>> | "value" | "max" | "getValueLabel"> & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-    unstyled?: boolean | undefined;
-    transparent?: boolean | undefined;
-    fullscreen?: boolean | undefined;
-    circular?: boolean | undefined;
-    hoverTheme?: boolean | undefined;
-    pressTheme?: boolean | undefined;
-    focusTheme?: boolean | undefined;
-    elevate?: boolean | undefined;
-    bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -142,6 +110,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -150,7 +119,38 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
+    radiused?: boolean | undefined;
+    padded?: boolean | undefined;
+    chromeless?: boolean | "all" | undefined;
+    size?: import("@tamagui/core").SizeTokens | undefined;
+}>>> | "value" | "max" | "getValueLabel"> & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | "backgrounded" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
     backgrounded?: boolean | undefined;
+    transparent?: boolean | undefined;
+    fullscreen?: boolean | undefined;
+    circular?: boolean | undefined;
+    hoverTheme?: boolean | undefined;
+    pressTheme?: boolean | undefined;
+    focusTheme?: boolean | undefined;
+    elevate?: boolean | undefined;
+    bordered?: number | boolean | undefined;
+    radiused?: boolean | undefined;
+    padded?: boolean | undefined;
+    chromeless?: boolean | "all" | undefined;
+    size?: import("@tamagui/core").SizeTokens | undefined;
+}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
+    transparent?: boolean | undefined;
+    fullscreen?: boolean | undefined;
+    circular?: boolean | undefined;
+    hoverTheme?: boolean | undefined;
+    pressTheme?: boolean | undefined;
+    focusTheme?: boolean | undefined;
+    elevate?: boolean | undefined;
+    bordered?: number | boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -158,6 +158,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -166,7 +167,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -174,6 +174,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -182,7 +183,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -190,6 +190,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -198,7 +199,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -210,6 +210,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 } & React.RefAttributes<import("@tamagui/core").TamaguiElement>> & import("@tamagui/core").StaticComponentObject<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -218,14 +219,14 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
     size?: import("@tamagui/core").SizeTokens | undefined;
-}>, `$${string}` | `$${number}` | `$theme-${string}` | `$theme-${number}` | "elevation" | "unstyled" | keyof import("@tamagui/core").RNTamaguiViewNonStyleProps | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size" | keyof import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+}>, `$${string}` | `$${number}` | `$theme-${string}` | `$theme-${number}` | "elevation" | "unstyled" | "backgrounded" | keyof import("@tamagui/core").RNTamaguiViewNonStyleProps | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "radiused" | "padded" | "chromeless" | "size" | keyof import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -234,39 +235,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
-    radiused?: boolean | undefined;
-    padded?: boolean | undefined;
-    chromeless?: boolean | "all" | undefined;
-    size?: import("@tamagui/core").SizeTokens | undefined;
-}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-    unstyled?: boolean | undefined;
-    transparent?: boolean | undefined;
-    fullscreen?: boolean | undefined;
-    circular?: boolean | undefined;
-    hoverTheme?: boolean | undefined;
-    pressTheme?: boolean | undefined;
-    focusTheme?: boolean | undefined;
-    elevate?: boolean | undefined;
-    bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
-    radiused?: boolean | undefined;
-    padded?: boolean | undefined;
-    chromeless?: boolean | "all" | undefined;
-    size?: import("@tamagui/core").SizeTokens | undefined;
-}>>> | "value" | "max" | "getValueLabel"> & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-    unstyled?: boolean | undefined;
-    transparent?: boolean | undefined;
-    fullscreen?: boolean | undefined;
-    circular?: boolean | undefined;
-    hoverTheme?: boolean | undefined;
-    pressTheme?: boolean | undefined;
-    focusTheme?: boolean | undefined;
-    elevate?: boolean | undefined;
-    bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -274,6 +242,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -282,7 +251,38 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
+    radiused?: boolean | undefined;
+    padded?: boolean | undefined;
+    chromeless?: boolean | "all" | undefined;
+    size?: import("@tamagui/core").SizeTokens | undefined;
+}>>> | "value" | "max" | "getValueLabel"> & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | "backgrounded" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
     backgrounded?: boolean | undefined;
+    transparent?: boolean | undefined;
+    fullscreen?: boolean | undefined;
+    circular?: boolean | undefined;
+    hoverTheme?: boolean | undefined;
+    pressTheme?: boolean | undefined;
+    focusTheme?: boolean | undefined;
+    elevate?: boolean | undefined;
+    bordered?: number | boolean | undefined;
+    radiused?: boolean | undefined;
+    padded?: boolean | undefined;
+    chromeless?: boolean | "all" | undefined;
+    size?: import("@tamagui/core").SizeTokens | undefined;
+}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
+    transparent?: boolean | undefined;
+    fullscreen?: boolean | undefined;
+    circular?: boolean | undefined;
+    hoverTheme?: boolean | undefined;
+    pressTheme?: boolean | undefined;
+    focusTheme?: boolean | undefined;
+    elevate?: boolean | undefined;
+    bordered?: number | boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -290,6 +290,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -298,7 +299,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -306,6 +306,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -314,7 +315,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -322,6 +322,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -330,7 +331,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -339,9 +339,10 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     value?: number | null | undefined;
     max?: number | undefined;
     getValueLabel?(value: number, max: number): string;
-}, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+}, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | "backgrounded" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -350,7 +351,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -358,6 +358,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -366,7 +367,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -374,6 +374,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -382,7 +383,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -390,6 +390,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -398,7 +399,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -406,6 +406,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -414,7 +415,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -426,6 +426,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
 }, import("@tamagui/core").StackStylePropsBase, {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    backgrounded?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -434,7 +435,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     focusTheme?: boolean | undefined;
     elevate?: boolean | undefined;
     bordered?: number | boolean | undefined;
-    backgrounded?: boolean | undefined;
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
@@ -443,6 +443,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     __tama: [Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -451,14 +452,14 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
         size?: import("@tamagui/core").SizeTokens | undefined;
-    }>, `$${string}` | `$${number}` | `$theme-${string}` | `$theme-${number}` | "elevation" | "unstyled" | keyof import("@tamagui/core").RNTamaguiViewNonStyleProps | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size" | keyof import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+    }>, `$${string}` | `$${number}` | `$theme-${string}` | `$theme-${number}` | "elevation" | "unstyled" | "backgrounded" | keyof import("@tamagui/core").RNTamaguiViewNonStyleProps | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "radiused" | "padded" | "chromeless" | "size" | keyof import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -467,39 +468,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
-        radiused?: boolean | undefined;
-        padded?: boolean | undefined;
-        chromeless?: boolean | "all" | undefined;
-        size?: import("@tamagui/core").SizeTokens | undefined;
-    }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-        elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-        unstyled?: boolean | undefined;
-        transparent?: boolean | undefined;
-        fullscreen?: boolean | undefined;
-        circular?: boolean | undefined;
-        hoverTheme?: boolean | undefined;
-        pressTheme?: boolean | undefined;
-        focusTheme?: boolean | undefined;
-        elevate?: boolean | undefined;
-        bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
-        radiused?: boolean | undefined;
-        padded?: boolean | undefined;
-        chromeless?: boolean | "all" | undefined;
-        size?: import("@tamagui/core").SizeTokens | undefined;
-    }>>> | "value" | "max" | "getValueLabel"> & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-        elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-        unstyled?: boolean | undefined;
-        transparent?: boolean | undefined;
-        fullscreen?: boolean | undefined;
-        circular?: boolean | undefined;
-        hoverTheme?: boolean | undefined;
-        pressTheme?: boolean | undefined;
-        focusTheme?: boolean | undefined;
-        elevate?: boolean | undefined;
-        bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -507,6 +475,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -515,7 +484,38 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
+        radiused?: boolean | undefined;
+        padded?: boolean | undefined;
+        chromeless?: boolean | "all" | undefined;
+        size?: import("@tamagui/core").SizeTokens | undefined;
+    }>>> | "value" | "max" | "getValueLabel"> & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | "backgrounded" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+        elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         backgrounded?: boolean | undefined;
+        transparent?: boolean | undefined;
+        fullscreen?: boolean | undefined;
+        circular?: boolean | undefined;
+        hoverTheme?: boolean | undefined;
+        pressTheme?: boolean | undefined;
+        focusTheme?: boolean | undefined;
+        elevate?: boolean | undefined;
+        bordered?: number | boolean | undefined;
+        radiused?: boolean | undefined;
+        padded?: boolean | undefined;
+        chromeless?: boolean | "all" | undefined;
+        size?: import("@tamagui/core").SizeTokens | undefined;
+    }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+        elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
+        transparent?: boolean | undefined;
+        fullscreen?: boolean | undefined;
+        circular?: boolean | undefined;
+        hoverTheme?: boolean | undefined;
+        pressTheme?: boolean | undefined;
+        focusTheme?: boolean | undefined;
+        elevate?: boolean | undefined;
+        bordered?: number | boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -523,6 +523,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -531,7 +532,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -539,6 +539,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -547,7 +548,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -555,6 +555,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -563,7 +564,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -572,9 +572,10 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         value?: number | null | undefined;
         max?: number | undefined;
         getValueLabel?(value: number, max: number): string;
-    }, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+    }, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | "backgrounded" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -583,7 +584,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -591,6 +591,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -599,7 +600,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -607,6 +607,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -615,7 +616,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -623,6 +623,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -631,7 +632,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -639,6 +639,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -647,7 +648,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -659,6 +659,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     }, import("@tamagui/core").StackStylePropsBase, {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -667,7 +668,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
@@ -677,6 +677,7 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
     Indicator: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -685,13 +686,13 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
     }>, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & void, import("@tamagui/core").StackStylePropsBase, {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
         unstyled?: boolean | undefined;
+        backgrounded?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -700,7 +701,6 @@ declare const Progress: React.ForwardRefExoticComponent<Omit<import("@tamagui/co
         focusTheme?: boolean | undefined;
         elevate?: boolean | undefined;
         bordered?: number | boolean | undefined;
-        backgrounded?: boolean | undefined;
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;

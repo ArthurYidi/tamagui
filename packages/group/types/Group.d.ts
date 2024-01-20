@@ -10,6 +10,7 @@ export declare const GroupFrame: import("@tamagui/core").TamaguiComponent<{
 }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -22,7 +23,6 @@ export declare const GroupFrame: import("@tamagui/core").TamaguiComponent<{
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }, {}>;
 export type GroupProps = GetProps<typeof GroupFrame> & {
     /**
@@ -52,9 +52,10 @@ export type GroupItemProps = {
 export declare const useGroupItem: (childrenProps: {
     disabled: boolean;
 }, forcePlacement?: GroupItemProps['forcePlacement'], __scopeGroup?: Scope) => Record<string, any>;
-export declare const Group: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+export declare const Group: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | "size" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -67,10 +68,10 @@ export declare const Group: React.ForwardRefExoticComponent<Omit<import("@tamagu
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -83,10 +84,10 @@ export declare const Group: React.ForwardRefExoticComponent<Omit<import("@tamagu
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -99,10 +100,10 @@ export declare const Group: React.ForwardRefExoticComponent<Omit<import("@tamagu
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -115,10 +116,10 @@ export declare const Group: React.ForwardRefExoticComponent<Omit<import("@tamagu
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -131,7 +132,6 @@ export declare const Group: React.ForwardRefExoticComponent<Omit<import("@tamagu
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }>> & {
     /**
      * @deprecated use `orientation` instead
@@ -154,9 +154,10 @@ export declare const Group: React.ForwardRefExoticComponent<Omit<import("@tamagu
 } & React.RefAttributes<TamaguiElement>> & {
     Item: (props: ScopedProps<GroupItemProps>) => any;
 };
-export declare const YGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+export declare const YGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | "size" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -169,10 +170,10 @@ export declare const YGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -185,10 +186,10 @@ export declare const YGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -201,10 +202,10 @@ export declare const YGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -217,10 +218,10 @@ export declare const YGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -233,7 +234,6 @@ export declare const YGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }>> & {
     /**
      * @deprecated use `orientation` instead
@@ -256,9 +256,10 @@ export declare const YGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
 } & React.RefAttributes<TamaguiElement>> & {
     Item: (props: ScopedProps<GroupItemProps>) => any;
 };
-export declare const XGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+export declare const XGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | "size" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -271,10 +272,10 @@ export declare const XGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -287,10 +288,10 @@ export declare const XGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -303,10 +304,10 @@ export declare const XGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -319,10 +320,10 @@ export declare const XGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     unstyled?: boolean | undefined;
+    size?: any;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -335,7 +336,6 @@ export declare const XGroup: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    size?: any;
 }>> & {
     /**
      * @deprecated use `orientation` instead
