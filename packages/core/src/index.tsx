@@ -281,8 +281,6 @@ export const Text = WebText as any as RNTamaguiText
 // })
 
 // export const A = styled(Z, {
-//   xxx
-
 //   variants: {} as const,
 // })
 

@@ -6,6 +6,7 @@ import { getReactNativeConfig } from './setupReactNative'
 import type {
   GetBaseStyles,
   GetNonStyledProps,
+  GetStyledProps,
   GetProps,
   GetStyledVariants,
   GetVariantValues,
@@ -84,9 +85,6 @@ export function styled<
    * that would give you nicely merged pseudo sub-styles but its just too much for TS
    * so now pseudos wont be nicely typed inside media queries, but at least we can nest
    */
-
-  type z = { asdsa: 4 }
-  type a = z extends { asdsa?: 1 } ? true : false
 
   type StyledComponent = TamaguiComponent<
     ParentComponent extends { __tama: any }

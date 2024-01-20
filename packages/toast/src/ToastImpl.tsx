@@ -36,7 +36,6 @@ import { VIEWPORT_PAUSE, VIEWPORT_RESUME } from './ToastViewport'
 
 const ToastImplFrame = styled(ThemeableStack, {
   name: 'ToastImpl',
-  focusable: true,
 
   variants: {
     unstyled: {

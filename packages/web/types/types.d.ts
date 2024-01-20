@@ -806,6 +806,9 @@ export type TamaguiComponent<Props = any, Ref = any, NonStyledProps = {}, BaseSt
 } ? GetFinalProps<NonStyledProps, BaseStyles & VariantProps> : Props) & RefAttributes<Ref>> & StaticComponentObject<Props, Ref, NonStyledProps, BaseStyles, VariantProps, ParentStaticProperties> & Omit<ParentStaticProperties, 'staticConfig' | 'extractable' | 'styleable'> & {
     __tama: [Props, Ref, NonStyledProps, BaseStyles, VariantProps, ParentStaticProperties];
 };
+export type GetStyledProps<A extends StylableComponent> = A extends {
+    __tama: [any, any, any, infer BaseStyles, infer VariantProps, any];
+} ? BaseStyles & VariantProps : GetProps<A>;
 export type GetProps<A extends StylableComponent> = A extends {
     __tama: [
         infer Props,

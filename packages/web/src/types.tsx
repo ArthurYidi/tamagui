@@ -1608,6 +1608,12 @@ export type TamaguiComponent<
     __tama: [Props, Ref, NonStyledProps, BaseStyles, VariantProps, ParentStaticProperties]
   }
 
+export type GetStyledProps<A extends StylableComponent> = A extends {
+  __tama: [any, any, any, infer BaseStyles, infer VariantProps, any]
+}
+  ? BaseStyles & VariantProps
+  : GetProps<A>
+
 export type GetProps<A extends StylableComponent> = A extends {
   __tama: [
     infer Props,
