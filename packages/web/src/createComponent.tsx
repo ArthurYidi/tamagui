@@ -48,6 +48,7 @@ import {
   SpaceDirection,
   SpaceValue,
   SpacerProps,
+  SpacerPropsBase,
   StackNonStyleProps,
   StackProps,
   StackStylePropsBase,
@@ -1392,7 +1393,7 @@ export const Spacer = createComponent<
   SpacerProps,
   TamaguiElement,
   StackNonStyleProps,
-  StackStylePropsBase
+  StackStylePropsBase & SpacerPropsBase
 >({
   acceptsClassName: true,
   memo: true,

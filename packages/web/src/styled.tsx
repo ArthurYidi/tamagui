@@ -8,7 +8,7 @@ import type {
   GetFinalProps,
   GetNonStyledProps,
   GetProps,
-  GetVariantProps,
+  GetStyledVariants,
   GetVariantValues,
   StaticConfig,
   StylableComponent,
@@ -18,11 +18,27 @@ import type {
   VariantSpreadFunction,
 } from './types'
 
-type AreVariantsUndefined<Variants> =
+export type CreateTamaguiComponent<
+  ParentComponent extends StylableComponent,
+  Variants,
+  CustomTokenProps extends Record<string, any>,
+  StaticProps,
+> = TamaguiComponent<
+  ParentComponent extends { __tama: any }
+    ? { expandLater: true }
+    : GetProps<ParentComponent>,
+  GetRef<ParentComponent>,
+  GetNonStyledProps<ParentComponent>,
+  GetBaseStyles<ParentComponent> & CustomTokenProps,
+  Variants,
+  StaticProps
+>
+
+export type AreVariantsUndefined<Variants> =
   // because we pass in the Generic variants which for some reason has this :)
   Variants extends void ? true : false
 
-type GetVariantAcceptedValues<V> = V extends Object
+export type GetVariantAcceptedValues<V> = V extends Object
   ? {
       [Key in keyof V]?: V[Key] extends VariantSpreadFunction<any, infer Val>
         ? Val
@@ -46,14 +62,7 @@ export function styled<
   },
   staticExtractionOptions?: StyledStaticConfig
 ) {
-  // do type stuff at top for easier readability
-
-  // get parent props without pseudos and medias so we can rebuild both with new variants
-  // get parent props without pseudos and medias so we can rebuild both with new variants
-  type ParentNonStyledProps = GetNonStyledProps<ParentComponent>
-  type ParentStylesBase = GetBaseStyles<ParentComponent>
-  type ParentVariants = GetVariantProps<ParentComponent>
-
+  type ParentVariants = GetStyledVariants<ParentComponent>
   type OurVariantProps = AreVariantsUndefined<Variants> extends true
     ? {}
     : GetVariantAcceptedValues<Variants>
@@ -85,42 +94,12 @@ export function styled<
    * so now pseudos wont be nicely typed inside media queries, but at least we can nest
    */
 
-  type ShoudSkipTypes = ParentComponent extends TamaguiComponent
-    ? AreVariantsUndefined<Variants> extends true
-      ? true
-      : false
-    : false
-
-  type Props = ParentComponent extends TamaguiComponent
-    ? { expandLater: true }
-    : GetFinalProps<
-        ParentNonStyledProps,
-        ParentStylesBase & MergedVariants & CustomTokenProps
-      >
-
-  type ParentStaticProperties = {
-    [Key in Exclude<
-      keyof ParentComponent,
-      | 'defaultProps'
-      | 'propTypes'
-      | '$$typeof'
-      | 'staticConfig'
-      | 'extractable'
-      | 'styleable'
-    >]: ParentComponent[Key]
-  }
-
-  // type StyledComponent = AreVariantsUndefined<Variants>
-  type StyledComponent = ShoudSkipTypes extends true
-    ? ParentComponent
-    : TamaguiComponent<
-        Props,
-        GetRef<ParentComponent>,
-        ParentNonStyledProps,
-        ParentStylesBase & CustomTokenProps,
-        MergedVariants,
-        ParentStaticProperties
-      >
+  type StyledComponent = CreateTamaguiComponent<
+    ParentComponent,
+    MergedVariants,
+    CustomTokenProps,
+    ParentComponent
+  >
 
   // validate not using a variant over an existing valid style
   if (process.env.NODE_ENV !== 'production') {

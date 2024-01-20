@@ -7,35 +7,7 @@ type ScopedProps<P> = P & {
 };
 export declare const GroupFrame: import("@tamagui/core").TamaguiComponent<{
     expandLater: true;
-}, TamaguiElement, import("@tamagui/core").StackNonStyleProps & {
-    onStartShouldSetResponder?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    dataSet?: Record<string, string | number | null | undefined> | undefined;
-    onScrollShouldSetResponder?: unknown;
-    onScrollShouldSetResponderCapture?: unknown;
-    onSelectionChangeShouldSetResponder?: unknown;
-    onSelectionChangeShouldSetResponderCapture?: unknown;
-    onLayout?: ((event: import("react-native").LayoutChangeEvent) => void) | undefined;
-    href?: string | undefined;
-    hrefAttrs?: {
-        target?: "top" | "_blank" | "_self" | "_top" | "blank" | "self" | undefined;
-        rel?: string | undefined;
-        download?: boolean | undefined;
-    } | undefined;
-    elevationAndroid?: string | number | undefined;
-    rel?: any;
-    download?: any;
-    onMoveShouldSetResponder?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onResponderEnd?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderGrant?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderReject?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderMove?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderRelease?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderStart?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderTerminationRequest?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onResponderTerminate?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onStartShouldSetResponderCapture?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onMoveShouldSetResponderCapture?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-}, import("@tamagui/core").StackStylePropsBase, {
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     size?: any;
     transparent?: boolean | undefined;
@@ -82,35 +54,7 @@ export type GroupItemProps = {
 export declare const useGroupItem: (childrenProps: {
     disabled: boolean;
 }, forcePlacement?: GroupItemProps['forcePlacement'], __scopeGroup?: Scope) => Record<string, any>;
-export declare const Group: React.ForwardRefExoticComponent<import("@tamagui/core").StackNonStyleProps & {
-    onStartShouldSetResponder?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    dataSet?: Record<string, string | number | null | undefined> | undefined;
-    onScrollShouldSetResponder?: unknown;
-    onScrollShouldSetResponderCapture?: unknown;
-    onSelectionChangeShouldSetResponder?: unknown;
-    onSelectionChangeShouldSetResponderCapture?: unknown;
-    onLayout?: ((event: import("react-native").LayoutChangeEvent) => void) | undefined;
-    href?: string | undefined;
-    hrefAttrs?: {
-        target?: "top" | "_blank" | "_self" | "_top" | "blank" | "self" | undefined;
-        rel?: string | undefined;
-        download?: boolean | undefined;
-    } | undefined;
-    elevationAndroid?: string | number | undefined;
-    rel?: any;
-    download?: any;
-    onMoveShouldSetResponder?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onResponderEnd?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderGrant?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderReject?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderMove?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderRelease?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderStart?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderTerminationRequest?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onResponderTerminate?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onStartShouldSetResponderCapture?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onMoveShouldSetResponderCapture?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-} & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+export declare const Group: React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     size?: any;
     transparent?: boolean | undefined;
@@ -196,35 +140,7 @@ export declare const Group: React.ForwardRefExoticComponent<import("@tamagui/cor
 } & React.RefAttributes<TamaguiElement>> & {
     Item: (props: ScopedProps<GroupItemProps>) => any;
 };
-export declare const YGroup: React.ForwardRefExoticComponent<import("@tamagui/core").StackNonStyleProps & {
-    onStartShouldSetResponder?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    dataSet?: Record<string, string | number | null | undefined> | undefined;
-    onScrollShouldSetResponder?: unknown;
-    onScrollShouldSetResponderCapture?: unknown;
-    onSelectionChangeShouldSetResponder?: unknown;
-    onSelectionChangeShouldSetResponderCapture?: unknown;
-    onLayout?: ((event: import("react-native").LayoutChangeEvent) => void) | undefined;
-    href?: string | undefined;
-    hrefAttrs?: {
-        target?: "top" | "_blank" | "_self" | "_top" | "blank" | "self" | undefined;
-        rel?: string | undefined;
-        download?: boolean | undefined;
-    } | undefined;
-    elevationAndroid?: string | number | undefined;
-    rel?: any;
-    download?: any;
-    onMoveShouldSetResponder?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onResponderEnd?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderGrant?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderReject?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderMove?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderRelease?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderStart?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderTerminationRequest?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onResponderTerminate?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onStartShouldSetResponderCapture?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onMoveShouldSetResponderCapture?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-} & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+export declare const YGroup: React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     size?: any;
     transparent?: boolean | undefined;
@@ -310,35 +226,7 @@ export declare const YGroup: React.ForwardRefExoticComponent<import("@tamagui/co
 } & React.RefAttributes<TamaguiElement>> & {
     Item: (props: ScopedProps<GroupItemProps>) => any;
 };
-export declare const XGroup: React.ForwardRefExoticComponent<import("@tamagui/core").StackNonStyleProps & {
-    onStartShouldSetResponder?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    dataSet?: Record<string, string | number | null | undefined> | undefined;
-    onScrollShouldSetResponder?: unknown;
-    onScrollShouldSetResponderCapture?: unknown;
-    onSelectionChangeShouldSetResponder?: unknown;
-    onSelectionChangeShouldSetResponderCapture?: unknown;
-    onLayout?: ((event: import("react-native").LayoutChangeEvent) => void) | undefined;
-    href?: string | undefined;
-    hrefAttrs?: {
-        target?: "top" | "_blank" | "_self" | "_top" | "blank" | "self" | undefined;
-        rel?: string | undefined;
-        download?: boolean | undefined;
-    } | undefined;
-    elevationAndroid?: string | number | undefined;
-    rel?: any;
-    download?: any;
-    onMoveShouldSetResponder?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onResponderEnd?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderGrant?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderReject?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderMove?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderRelease?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderStart?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onResponderTerminationRequest?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onResponderTerminate?: ((event: import("react-native").GestureResponderEvent) => void) | undefined;
-    onStartShouldSetResponderCapture?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-    onMoveShouldSetResponderCapture?: ((event: import("react-native").GestureResponderEvent) => boolean) | undefined;
-} & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+export declare const XGroup: React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     size?: any;
     transparent?: boolean | undefined;

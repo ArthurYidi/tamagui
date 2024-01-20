@@ -22,7 +22,7 @@ import type {
 import type { Variable } from './createVariable'
 import { StyledContext } from './helpers/createStyledContext'
 import { CSSColorNames } from './interfaces/CSSColorNames'
-import { RNOnlyProps, RNTextProps, RNViewProps } from './interfaces/RNExclusiveTypes'
+import { RNOnlyProps } from './interfaces/RNExclusiveTypes'
 import { Role } from './interfaces/Role'
 import type { LanguageContextType } from './views/FontLanguage.types'
 import type { ThemeProviderProps } from './views/ThemeProvider'
@@ -664,7 +664,7 @@ type GetAltThemeNames<S> =
   | (S extends `${string}_${infer Alt}` ? GetAltThemeNames<Alt> : S)
   | S
 
-type SpacerPropsBase = {
+export type SpacerPropsBase = {
   size?: SpaceValue
   flex?: boolean | number
   direction?: SpaceDirection | 'unset'
@@ -1375,8 +1375,9 @@ export type AllPlatforms = 'web' | 'native' | 'android' | 'ios'
 //
 // add both theme and shorthands
 //
-export type WithThemeAndShorthands<A extends Object> = WithThemeValues<OmitLonghands<A>> &
-  WithShorthands<WithThemeValues<A>>
+export type WithThemeAndShorthands<A extends Object> = OnlyAllowShorthands extends true
+  ? WithThemeValues<OmitLonghands<A>>
+  : WithThemeValues<A> & WithShorthands<WithThemeValues<A>>
 
 //
 // combines all of theme, shorthands, pseudos...
@@ -1484,13 +1485,6 @@ export interface TextStylePropsBase
   wordWrap?: Properties['wordWrap']
 }
 
-// = Omit<
-//   ,
-//   OverrideRNStyleProps | keyof SharedBaseExtraStylePropsText
-// > &
-//   TransformStyleProps &
-//   SharedBaseExtraStylePropsText
-
 //
 // Stack
 //
@@ -1593,11 +1587,11 @@ export type TamaguiComponent<
   BaseStyles extends Object = {},
   VariantProps = {},
   ParentStaticProperties = {},
-> = ReactComponentWithRef<
-  Props extends { expandLater: true }
+> = ForwardRefExoticComponent<
+  (Props extends { expandLater: true }
     ? GetFinalProps<NonStyledProps, BaseStyles & VariantProps>
-    : Props,
-  Ref
+    : Props) &
+    RefAttributes<Ref>
 > &
   StaticComponentObject<
     Props,
@@ -1607,7 +1601,44 @@ export type TamaguiComponent<
     VariantProps,
     ParentStaticProperties
   > &
-  ParentStaticProperties
+  Omit<ParentStaticProperties, 'staticConfig' | 'extractable' | 'styleable'> & {
+    __tama: [Props, Ref, NonStyledProps, BaseStyles, VariantProps, ParentStaticProperties]
+  }
+
+export type GetProps<A extends StylableComponent> = A extends {
+  __tama: [infer Props, any, infer NonStyledProps, infer BaseStyles, infer Variants]
+}
+  ? Props extends { expandLater: true }
+    ? GetFinalProps<NonStyledProps, BaseStyles & Variants>
+    : Props
+  : A extends TamaguiReactElement<infer Props>
+    ? Props
+    : A extends ComponentType<infer Props>
+      ? GetGenericComponentTamaguiProps<Props>
+      : A extends new (
+            props: infer Props
+          ) => any
+        ? GetGenericComponentTamaguiProps<Props>
+        : {}
+
+export type GetNonStyledProps<A> = A extends {
+  __tama: [any, any, infer A]
+}
+  ? A
+  : {}
+export type GetBaseStyles<A> = A extends {
+  __tama: [any, any, any, infer A]
+}
+  ? A
+  : {}
+export type GetStyledVariants<A> = A extends {
+  __tama: [any, any, any, any, infer A]
+}
+  ? A
+  : {}
+
+type GetGenericComponentTamaguiProps<P> = P &
+  Omit<'textAlign' extends keyof P ? TextProps : StackProps, keyof P>
 
 export type StaticComponentObject<
   Props,
@@ -1813,66 +1844,6 @@ export type StylableComponent =
   | (new (
       props: any
     ) => any)
-
-export type GetStyledVariants<A extends TamaguiComponent> = A extends TamaguiComponent<
-  any,
-  any,
-  any,
-  any,
-  infer Variants
->
-  ? Variants
-  : never
-
-export type GetNonStyledProps<A extends StylableComponent> = A extends TamaguiComponent<
-  any,
-  any,
-  infer P
->
-  ? P
-  : GetProps<A>
-
-export type GetBaseStyles<A extends StylableComponent> = A extends TamaguiComponent<
-  any,
-  any,
-  any,
-  infer P
->
-  ? P
-  : GetProps<A>
-
-export type GetVariantProps<A extends StylableComponent> = A extends TamaguiComponent<
-  any,
-  any,
-  any,
-  any,
-  infer V
->
-  ? V
-  : {}
-
-export type GetProps<A extends StylableComponent> = A extends TamaguiComponent<
-  infer Props,
-  any,
-  infer NonStyledProps,
-  infer BaseStyles,
-  infer Variants
->
-  ? Props extends { expandLater: true }
-    ? GetFinalProps<NonStyledProps, BaseStyles & Variants>
-    : Props
-  : A extends TamaguiReactElement<infer Props>
-    ? Props
-    : A extends ComponentType<infer Props>
-      ? GetGenericComponentTamaguiProps<Props>
-      : A extends new (
-            props: infer Props
-          ) => any
-        ? GetGenericComponentTamaguiProps<Props>
-        : {}
-
-type GetGenericComponentTamaguiProps<P> = P &
-  Omit<'textAlign' extends keyof P ? TextProps : StackProps, keyof P>
 
 export type SpreadKeys =
   | '...fontSize'
