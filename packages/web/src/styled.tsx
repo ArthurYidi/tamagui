@@ -18,27 +18,11 @@ import type {
   VariantSpreadFunction,
 } from './types'
 
-export type CreateTamaguiComponent<
-  ParentComponent extends StylableComponent,
-  Variants,
-  CustomTokenProps extends Record<string, any>,
-  StaticProps,
-> = TamaguiComponent<
-  ParentComponent extends { __tama: any }
-    ? { expandLater: true }
-    : GetProps<ParentComponent>,
-  GetRef<ParentComponent>,
-  GetNonStyledProps<ParentComponent>,
-  GetBaseStyles<ParentComponent> & CustomTokenProps,
-  Variants,
-  StaticProps
->
-
-export type AreVariantsUndefined<Variants> =
+type AreVariantsUndefined<Variants> =
   // because we pass in the Generic variants which for some reason has this :)
   Variants extends void ? true : false
 
-export type GetVariantAcceptedValues<V> = V extends Object
+type GetVariantAcceptedValues<V> = V extends Object
   ? {
       [Key in keyof V]?: V[Key] extends VariantSpreadFunction<any, infer Val>
         ? Val
@@ -62,7 +46,14 @@ export function styled<
   },
   staticExtractionOptions?: StyledStaticConfig
 ) {
+  // do type stuff at top for easier readability
+
+  // get parent props without pseudos and medias so we can rebuild both with new variants
+  // get parent props without pseudos and medias so we can rebuild both with new variants
+  type ParentNonStyledProps = GetNonStyledProps<ParentComponent>
+  type ParentStylesBase = GetBaseStyles<ParentComponent>
   type ParentVariants = GetStyledVariants<ParentComponent>
+
   type OurVariantProps = AreVariantsUndefined<Variants> extends true
     ? {}
     : GetVariantAcceptedValues<Variants>
@@ -94,11 +85,15 @@ export function styled<
    * so now pseudos wont be nicely typed inside media queries, but at least we can nest
    */
 
-  type StyledComponent = CreateTamaguiComponent<
-    ParentComponent,
+  type StyledComponent = TamaguiComponent<
+    ParentComponent extends { __tama: any }
+      ? { __tamaDefer: true }
+      : GetProps<ParentComponent>,
+    GetRef<ParentComponent>,
+    ParentNonStyledProps,
+    ParentStylesBase & CustomTokenProps,
     MergedVariants,
-    CustomTokenProps,
-    ParentComponent
+    {}
   >
 
   // validate not using a variant over an existing valid style

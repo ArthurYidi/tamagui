@@ -35,7 +35,7 @@ export interface RNTamaguiViewNonStyleProps
     RNExclusiveViewProps {}
 
 type RNTamaguiView = TamaguiComponent<
-  { expandLater: true },
+  { __tamaDefer: true },
   TamaguiElement,
   RNTamaguiViewNonStyleProps,
   StackStylePropsBase,
@@ -48,7 +48,7 @@ export interface RNTamaguiTextNonStyleProps
     RNExclusiveTextProps {}
 
 type RNTamaguiText = TamaguiComponent<
-  { expandLater: true },
+  { __tamaDefer: true },
   TamaguiTextElement,
   RNTamaguiTextNonStyleProps,
   TextStylePropsBase,
@@ -255,37 +255,37 @@ export const Text = WebText as any as RNTamaguiText
 
 // easily test type declaration output and if it gets messy:
 
-export const X = styled(WebView, {})
+// export const X = styled(WebView, {})
 
-export const Y = styled(X, {
-  variants: {
-    abc: {
-      true: {},
-    },
-  } as const,
-})
+// export const Y = styled(X, {
+//   variants: {
+//     abc: {
+//       true: {},
+//     },
+//   } as const,
+// })
 
-const x = <Y abc />
+// const x = <Y abc />
 
-export const Z = styled(Y, {
-  variants: {
-    y: {
-      true: {},
-    },
-  } as const,
-})
+// export const Z = styled(Y, {
+//   variants: {
+//     y: {
+//       true: {},
+//     },
+//   } as const,
+// })
 
-const variants = {
-  fullscreen: {
-    true: {},
-  },
-  elevation: {
-    '...size': () => ({}),
-    ':number': () => ({}),
-  },
-} as const
+// const variants = {
+//   fullscreen: {
+//     true: {},
+//   },
+//   elevation: {
+//     '...size': () => ({}),
+//     ':number': () => ({}),
+//   },
+// } as const
 
-export const YStack = styled(View, {
-  flexDirection: 'column',
-  variants,
-})
+// export const YStack = styled(View, {
+//   flexDirection: 'column',
+//   variants,
+// })

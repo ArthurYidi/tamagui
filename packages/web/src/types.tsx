@@ -1588,7 +1588,7 @@ export type TamaguiComponent<
   VariantProps = {},
   ParentStaticProperties = {},
 > = ForwardRefExoticComponent<
-  (Props extends { expandLater: true }
+  (Props extends { __tamaDefer: true }
     ? GetFinalProps<NonStyledProps, BaseStyles & VariantProps>
     : Props) &
     RefAttributes<Ref>
@@ -1608,7 +1608,7 @@ export type TamaguiComponent<
 export type GetProps<A extends StylableComponent> = A extends {
   __tama: [infer Props, any, infer NonStyledProps, infer BaseStyles, infer Variants]
 }
-  ? Props extends { expandLater: true }
+  ? Props extends { __tamaDefer: true }
     ? GetFinalProps<NonStyledProps, BaseStyles & Variants>
     : Props
   : A extends TamaguiReactElement<infer Props>
@@ -1622,17 +1622,17 @@ export type GetProps<A extends StylableComponent> = A extends {
         : {}
 
 export type GetNonStyledProps<A> = A extends {
-  __tama: [any, any, infer A]
+  __tama: [any, any, infer A, any, any, any]
 }
   ? A
   : {}
 export type GetBaseStyles<A> = A extends {
-  __tama: [any, any, any, infer A]
+  __tama: [any, any, any, infer A, any, any]
 }
   ? A
   : {}
 export type GetStyledVariants<A> = A extends {
-  __tama: [any, any, any, any, infer A]
+  __tama: [any, any, any, any, infer A, any]
 }
   ? A
   : {}
