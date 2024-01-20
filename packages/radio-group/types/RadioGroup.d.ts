@@ -116,8 +116,9 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
     native?: boolean | undefined;
     accentColor?: string | undefined;
 } & React.RefAttributes<TamaguiElement>> & {
-    Indicator: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "unstyled"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+    Indicator: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -130,9 +131,9 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
     }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -145,9 +146,9 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
     }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -160,9 +161,9 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
     }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -175,9 +176,9 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
     }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -190,14 +191,14 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
     }>> & {
         forceMount?: boolean | undefined;
         unstyled?: boolean | undefined;
     } & React.RefAttributes<TamaguiElement>>;
-    Item: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "disabled" | "elevation" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "unstyled" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
+    Item: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "disabled" | "elevation" | "unstyled" | keyof import("@tamagui/core").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "size"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         disabled?: boolean | undefined;
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -210,11 +211,11 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
         size?: import("@tamagui/core").SizeTokens | undefined;
     }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         disabled?: boolean | undefined;
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -227,11 +228,11 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
         size?: import("@tamagui/core").SizeTokens | undefined;
     }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         disabled?: boolean | undefined;
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -244,11 +245,11 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
         size?: import("@tamagui/core").SizeTokens | undefined;
     }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
         disabled?: boolean | undefined;
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -261,11 +262,11 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
         size?: import("@tamagui/core").SizeTokens | undefined;
     }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
         disabled?: boolean | undefined;
         elevation?: number | import("@tamagui/core").SizeTokens | undefined;
+        unstyled?: boolean | undefined;
         transparent?: boolean | undefined;
         fullscreen?: boolean | undefined;
         circular?: boolean | undefined;
@@ -278,7 +279,6 @@ declare const RadioGroup: React.ForwardRefExoticComponent<Omit<import("@tamagui/
         radiused?: boolean | undefined;
         padded?: boolean | undefined;
         chromeless?: boolean | "all" | undefined;
-        unstyled?: boolean | undefined;
         size?: import("@tamagui/core").SizeTokens | undefined;
     }>> & {
         value: string;

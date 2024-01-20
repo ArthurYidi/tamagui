@@ -3,6 +3,7 @@ import { StyledContext } from './helpers/createStyledContext'
 import { mergeVariants } from './helpers/mergeVariants'
 import type { GetRef } from './interfaces/GetRef'
 import { getReactNativeConfig } from './setupReactNative'
+import { MergePreservingOptional } from './type-utils'
 import type {
   GetBaseStyles,
   GetNonStyledProps,
@@ -39,7 +40,7 @@ export function styled<
 >(
   ComponentIn: ParentComponent,
   // this should be Partial<GetProps<ParentComponent>> but causes excessively deep type issues
-  options?: GetProps<ParentComponent> & {
+  options?: Partial<GetProps<ParentComponent>> & {
     name?: string
     variants?: Variants | undefined
     defaultVariants?: GetVariantAcceptedValues<Variants>
@@ -73,7 +74,7 @@ export function styled<
   type AcceptedTokens = StyledStaticConfig['acceptTokens']
   type CustomTokenProps = AcceptedTokens extends Object
     ? {
-        [Key in keyof AcceptedTokens]: ThemeValueByCategory<AcceptedTokens[Key]>
+        [Key in keyof AcceptedTokens]?: ThemeValueByCategory<AcceptedTokens[Key]>
       }
     : {}
 
@@ -90,7 +91,7 @@ export function styled<
   type StyledComponent = TamaguiComponent<
     ParentComponent extends { __tama: any }
       ? { __tamaDefer: true }
-      : GetProps<ParentComponent>,
+      : MergePreservingOptional<GetProps<ParentComponent>, CustomTokenProps>,
     GetRef<ParentComponent>,
     ParentNonStyledProps,
     ParentStylesBase & CustomTokenProps,
@@ -154,6 +155,7 @@ export function styled<
             ...defaultProps,
           }
           if (parentStaticConfig.variants) {
+            // @ts-expect-error
             variants = mergeVariants(parentStaticConfig.variants, variants)
           }
         }
@@ -183,8 +185,7 @@ export function styled<
         ...(!isPlainStyledComponent && {
           Component,
         }),
-        // this type gets messed up by options?: Partial<GetProps<ParentComponent>> above
-        // take away the Partial<> and it's fine
+        // @ts-expect-error
         variants,
         defaultProps,
         defaultVariants,

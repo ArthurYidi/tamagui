@@ -6,6 +6,9 @@ export declare const ToggleFrame: import("@tamagui/web").TamaguiComponent<{
     __tamaDefer: true;
 }, import("@tamagui/web").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/web").StackStylePropsBase, {
     elevation?: number | import("@tamagui/web").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
+    active?: boolean | undefined;
+    orientation?: "horizontal" | "vertical" | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -18,9 +21,6 @@ export declare const ToggleFrame: import("@tamagui/web").TamaguiComponent<{
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    unstyled?: boolean | undefined;
-    active?: boolean | undefined;
-    orientation?: "horizontal" | "vertical" | undefined;
 }, {}>;
 type ToggleFrameProps = GetProps<typeof ToggleFrame>;
 type ToggleItemExtraProps = {
@@ -31,8 +31,11 @@ type ToggleItemExtraProps = {
     onPressedChange?(pressed: boolean): void;
 };
 export type ToggleProps = ToggleFrameProps & ToggleItemExtraProps;
-export declare const Toggle: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | keyof import("@tamagui/web").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless" | "unstyled" | "active" | "orientation"> & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase & {
+export declare const Toggle: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "elevation" | "unstyled" | "active" | "orientation" | keyof import("@tamagui/web").StackStylePropsBase | "transparent" | "fullscreen" | "circular" | "hoverTheme" | "pressTheme" | "focusTheme" | "elevate" | "bordered" | "backgrounded" | "radiused" | "padded" | "chromeless"> & import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase & {
     elevation?: number | import("@tamagui/web").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
+    active?: boolean | undefined;
+    orientation?: "horizontal" | "vertical" | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -45,11 +48,11 @@ export declare const Toggle: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    unstyled?: boolean | undefined;
-    active?: boolean | undefined;
-    orientation?: "horizontal" | "vertical" | undefined;
 }> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase & {
     elevation?: number | import("@tamagui/web").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
+    active?: boolean | undefined;
+    orientation?: "horizontal" | "vertical" | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -62,11 +65,11 @@ export declare const Toggle: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    unstyled?: boolean | undefined;
-    active?: boolean | undefined;
-    orientation?: "horizontal" | "vertical" | undefined;
 }>> & import("@tamagui/web").WithPseudoProps<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase & {
     elevation?: number | import("@tamagui/web").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
+    active?: boolean | undefined;
+    orientation?: "horizontal" | "vertical" | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -79,11 +82,11 @@ export declare const Toggle: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    unstyled?: boolean | undefined;
-    active?: boolean | undefined;
-    orientation?: "horizontal" | "vertical" | undefined;
 }> & import("@tamagui/web").WithShorthands<import("@tamagui/web").WithThemeValues<import("@tamagui/web").StackStylePropsBase & {
     elevation?: number | import("@tamagui/web").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
+    active?: boolean | undefined;
+    orientation?: "horizontal" | "vertical" | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -96,11 +99,11 @@ export declare const Toggle: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    unstyled?: boolean | undefined;
-    active?: boolean | undefined;
-    orientation?: "horizontal" | "vertical" | undefined;
 }>>> & import("@tamagui/web").WithMediaProps<import("@tamagui/web").WithThemeShorthandsAndPseudos<import("@tamagui/web").StackStylePropsBase & {
     elevation?: number | import("@tamagui/web").SizeTokens | undefined;
+    unstyled?: boolean | undefined;
+    active?: boolean | undefined;
+    orientation?: "horizontal" | "vertical" | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -113,9 +116,6 @@ export declare const Toggle: React.ForwardRefExoticComponent<Omit<import("@tamag
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    unstyled?: boolean | undefined;
-    active?: boolean | undefined;
-    orientation?: "horizontal" | "vertical" | undefined;
 }>> & ToggleItemExtraProps & React.RefAttributes<HTMLButtonElement>>;
 export {};
 //# sourceMappingURL=Toggle.d.ts.map

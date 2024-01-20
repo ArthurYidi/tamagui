@@ -5,6 +5,7 @@ export declare const SwitchThumb: import("@tamagui/core").TamaguiComponent<{
     size?: SizeTokens | undefined;
     checked?: boolean | undefined;
     elevation?: number | SizeTokens | undefined;
+    unstyled?: boolean | undefined;
     transparent?: boolean | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
@@ -17,7 +18,6 @@ export declare const SwitchThumb: import("@tamagui/core").TamaguiComponent<{
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    unstyled?: boolean | undefined;
 }, {}>;
 export declare const SwitchFrame: import("@tamagui/core").TamaguiComponent<{
     __tamaDefer: true;
@@ -26,7 +26,7 @@ export declare const SwitchFrame: import("@tamagui/core").TamaguiComponent<{
     checked?: boolean | undefined;
     frameWidth?: number | undefined;
     elevation?: number | SizeTokens | undefined;
-    fullscreen?: boolean | undefined;
     unstyled?: boolean | undefined;
+    fullscreen?: boolean | undefined;
 }, {}>;
 //# sourceMappingURL=Switch.d.ts.map
