@@ -1575,7 +1575,10 @@ export type Styleable<
   ParentStaticProperties
 >
 
-export type GetFinalProps<NonStyleProps, StylePropsBase> = NonStyleProps &
+export type GetFinalProps<NonStyleProps, StylePropsBase> = Omit<
+  NonStyleProps,
+  keyof StylePropsBase
+> &
   (StylePropsBase extends Object
     ? WithThemeShorthandsPseudosMediaAnimation<StylePropsBase>
     : {})
@@ -1606,10 +1609,17 @@ export type TamaguiComponent<
   }
 
 export type GetProps<A extends StylableComponent> = A extends {
-  __tama: [infer Props, any, infer NonStyledProps, infer BaseStyles, infer Variants]
+  __tama: [
+    infer Props,
+    any,
+    infer NonStyledProps,
+    infer BaseStyles,
+    infer VariantProps,
+    any,
+  ]
 }
   ? Props extends { __tamaDefer: true }
-    ? GetFinalProps<NonStyledProps, BaseStyles & Variants>
+    ? GetFinalProps<NonStyledProps, BaseStyles & VariantProps>
     : Props
   : A extends TamaguiReactElement<infer Props>
     ? Props
@@ -1862,7 +1872,9 @@ export type VariantDefinitions<
   Parent extends StylableComponent = TamaguiComponent,
   MyProps extends Object = GetProps<Parent>,
   Val = any,
-> = VariantDefinitionFromProps<MyProps, Val>
+> = VariantDefinitionFromProps<MyProps, Val> & {
+  _isEmpty?: 1
+}
 
 export type VariantDefinitionFromProps<MyProps, Val> = MyProps extends Object
   ? {
@@ -1906,7 +1918,7 @@ export type VariantDefinitionFromProps<MyProps, Val> = MyProps extends Object
                   : never
           })
     }
-  : never
+  : {}
 
 export type GenericStackVariants = VariantDefinitionFromProps<StackProps, any>
 export type GenericTextVariants = VariantDefinitionFromProps<StackProps, any>

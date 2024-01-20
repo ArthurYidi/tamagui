@@ -1,9 +1,7 @@
 export declare const VisuallyHidden: import("@tamagui/web").TamaguiComponent<{
-    expandLater: true;
+    __tamaDefer: true;
 }, import("@tamagui/web").TamaguiElement, import("@tamagui/web").StackNonStyleProps, import("@tamagui/web").StackStylePropsBase, {
     readonly preserveDimensions?: boolean | undefined;
     readonly visible?: boolean | undefined;
-}, {
-    displayName: string | undefined;
-}>;
+}, import("@tamagui/web").TamaguiComponent<import("@tamagui/web").StackProps, import("@tamagui/web").TamaguiElement, import("@tamagui/web").StackNonStyleProps, import("@tamagui/web").StackStylePropsBase, void, {}>>;
 //# sourceMappingURL=VisuallyHidden.d.ts.map

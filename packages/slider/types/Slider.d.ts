@@ -7,213 +7,269 @@ type SliderTrackElement = HTMLElement | View;
 export declare const SliderTrackFrame: import("@tamagui/core").TamaguiComponent<{
     __tamaDefer: true;
 }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    unstyled?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}, {}>;
-declare const SliderTrack: React.ForwardRefExoticComponent<Omit<SliderTrackProps, "ref"> & React.RefAttributes<SliderTrackElement>>;
-export declare const SliderTrackActiveFrame: import("@tamagui/core").TamaguiComponent<{
+    readonly unstyled?: boolean | undefined;
+}, import("@tamagui/core").TamaguiComponent<{
     __tamaDefer: true;
 }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}, {}>;
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}, import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+}, React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & void>> & React.RefAttributes<TamaguiElement>> & import("@tamagui/core").StaticComponentObject<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}> & Omit<{}, "staticConfig" | "extractable" | "styleable"> & {
+    __tama: [{
+        __tamaDefer: true;
+    }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}];
+}>>>;
+declare const SliderTrack: React.ForwardRefExoticComponent<SliderTrackProps & React.RefAttributes<SliderTrackElement>>;
+export declare const SliderTrackActiveFrame: import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {}, import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}, import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+}, React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & void>> & React.RefAttributes<TamaguiElement>> & import("@tamagui/core").StaticComponentObject<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}> & Omit<{}, "staticConfig" | "extractable" | "styleable"> & {
+    __tama: [{
+        __tamaDefer: true;
+    }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}];
+}>>>;
 type SliderTrackActiveProps = GetProps<typeof SliderTrackActiveFrame>;
-declare const SliderTrackActive: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}>> & React.RefAttributes<TamaguiElement> & Omit<import("@tamagui/core").StackProps, "size" | `$${string}` | `$${number}` | `$theme-${string}` | `$theme-${number}` | keyof import("@tamagui/core").StackStylePropsBase | "fullscreen" | keyof import("@tamagui/core").RNTamaguiViewNonStyleProps | keyof React.RefAttributes<TamaguiElement> | "orientation" | keyof import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}>>>>, "ref"> & React.RefAttributes<View>>;
+declare const SliderTrackActive: React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}>> & React.RefAttributes<View>>;
 export declare const SliderThumbFrame: import("@tamagui/core").TamaguiComponent<{
     __tamaDefer: true;
 }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
-    elevation?: number | SizeTokens | undefined;
-    size?: SizeTokens | undefined;
-    fullscreen?: boolean | undefined;
-    circular?: boolean | undefined;
-    hoverTheme?: boolean | undefined;
-    pressTheme?: boolean | undefined;
-    focusTheme?: boolean | undefined;
-    elevate?: boolean | undefined;
-    bordered?: number | boolean | undefined;
-    unstyled?: boolean | undefined;
-    transparent?: boolean | undefined;
-    backgrounded?: boolean | undefined;
-    radiused?: boolean | undefined;
-    padded?: boolean | undefined;
-    chromeless?: boolean | "all" | undefined;
-}, {}>;
+    readonly size?: SizeTokens | undefined;
+    readonly unstyled?: boolean | undefined;
+}, import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+    readonly backgrounded?: boolean | undefined;
+    readonly radiused?: boolean | undefined;
+    readonly hoverTheme?: boolean | undefined;
+    readonly pressTheme?: boolean | undefined;
+    readonly focusTheme?: boolean | undefined;
+    readonly circular?: boolean | undefined;
+    readonly padded?: boolean | undefined;
+    readonly elevate?: boolean | undefined;
+    readonly bordered?: number | boolean | undefined;
+    readonly transparent?: boolean | undefined;
+    readonly chromeless?: boolean | "all" | undefined;
+}, import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+}, React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & void>> & React.RefAttributes<TamaguiElement>> & import("@tamagui/core").StaticComponentObject<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}> & Omit<{}, "staticConfig" | "extractable" | "styleable"> & {
+    __tama: [{
+        __tamaDefer: true;
+    }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}];
+}>>>;
 interface SliderThumbProps extends SizableStackProps {
     index: number;
 }
 declare const SliderThumb: React.MemoExoticComponent<import("@tamagui/core").TamaguiComponent<Omit<{
     __tamaDefer: true;
 }, keyof SliderThumbProps> & SliderThumbProps, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & SliderThumbProps, import("@tamagui/core").StackStylePropsBase, {
-    elevation?: number | SizeTokens | undefined;
-    size?: SizeTokens | undefined;
-    fullscreen?: boolean | undefined;
-    circular?: boolean | undefined;
-    hoverTheme?: boolean | undefined;
-    pressTheme?: boolean | undefined;
-    focusTheme?: boolean | undefined;
-    elevate?: boolean | undefined;
-    bordered?: number | boolean | undefined;
-    unstyled?: boolean | undefined;
-    transparent?: boolean | undefined;
-    backgrounded?: boolean | undefined;
-    radiused?: boolean | undefined;
-    padded?: boolean | undefined;
-    chromeless?: boolean | "all" | undefined;
-}, {}>>;
-declare const Slider: React.ForwardRefExoticComponent<Omit<SliderProps, "ref"> & React.RefAttributes<TamaguiElement>> & {
-    Track: React.ForwardRefExoticComponent<Omit<SliderTrackProps, "ref"> & React.RefAttributes<SliderTrackElement>>;
-    TrackActive: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-        elevation?: number | SizeTokens | undefined;
-        size?: any;
-        fullscreen?: boolean | undefined;
-        orientation?: "vertical" | "horizontal" | undefined;
-    }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-        elevation?: number | SizeTokens | undefined;
-        size?: any;
-        fullscreen?: boolean | undefined;
-        orientation?: "vertical" | "horizontal" | undefined;
-    }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-        elevation?: number | SizeTokens | undefined;
-        size?: any;
-        fullscreen?: boolean | undefined;
-        orientation?: "vertical" | "horizontal" | undefined;
-    }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-        elevation?: number | SizeTokens | undefined;
-        size?: any;
-        fullscreen?: boolean | undefined;
-        orientation?: "vertical" | "horizontal" | undefined;
-    }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
-        elevation?: number | SizeTokens | undefined;
-        size?: any;
-        fullscreen?: boolean | undefined;
-        orientation?: "vertical" | "horizontal" | undefined;
-    }>> & React.RefAttributes<TamaguiElement> & Omit<import("@tamagui/core").StackProps, "size" | `$${string}` | `$${number}` | `$theme-${string}` | `$theme-${number}` | keyof import("@tamagui/core").StackStylePropsBase | "fullscreen" | keyof import("@tamagui/core").RNTamaguiViewNonStyleProps | keyof React.RefAttributes<TamaguiElement> | "orientation" | keyof import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-        elevation?: number | SizeTokens | undefined;
-        size?: any;
-        fullscreen?: boolean | undefined;
-        orientation?: "vertical" | "horizontal" | undefined;
-    }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-        elevation?: number | SizeTokens | undefined;
-        size?: any;
-        fullscreen?: boolean | undefined;
-        orientation?: "vertical" | "horizontal" | undefined;
-    }>>>>, "ref"> & React.RefAttributes<View>>;
+    readonly size?: SizeTokens | undefined;
+    readonly unstyled?: boolean | undefined;
+}, import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+    readonly backgrounded?: boolean | undefined;
+    readonly radiused?: boolean | undefined;
+    readonly hoverTheme?: boolean | undefined;
+    readonly pressTheme?: boolean | undefined;
+    readonly focusTheme?: boolean | undefined;
+    readonly circular?: boolean | undefined;
+    readonly padded?: boolean | undefined;
+    readonly elevate?: boolean | undefined;
+    readonly bordered?: number | boolean | undefined;
+    readonly transparent?: boolean | undefined;
+    readonly chromeless?: boolean | "all" | undefined;
+}, import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+}, React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & void>> & React.RefAttributes<TamaguiElement>> & import("@tamagui/core").StaticComponentObject<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}> & Omit<{}, "staticConfig" | "extractable" | "styleable"> & {
+    __tama: [{
+        __tamaDefer: true;
+    }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}];
+}>>>>;
+declare const Slider: React.ForwardRefExoticComponent<SliderProps & React.RefAttributes<TamaguiElement>> & {
+    Track: React.ForwardRefExoticComponent<SliderTrackProps & React.RefAttributes<SliderTrackElement>>;
+    TrackActive: React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: number | SizeTokens | undefined;
+    } & {
+        readonly orientation?: "vertical" | "horizontal" | undefined;
+        readonly size?: any;
+    }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: number | SizeTokens | undefined;
+    } & {
+        readonly orientation?: "vertical" | "horizontal" | undefined;
+        readonly size?: any;
+    }>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: number | SizeTokens | undefined;
+    } & {
+        readonly orientation?: "vertical" | "horizontal" | undefined;
+        readonly size?: any;
+    }> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: number | SizeTokens | undefined;
+    } & {
+        readonly orientation?: "vertical" | "horizontal" | undefined;
+        readonly size?: any;
+    }>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & void & {
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: number | SizeTokens | undefined;
+    } & {
+        readonly orientation?: "vertical" | "horizontal" | undefined;
+        readonly size?: any;
+    }>> & React.RefAttributes<View>>;
     Thumb: React.MemoExoticComponent<import("@tamagui/core").TamaguiComponent<Omit<{
         __tamaDefer: true;
     }, keyof SliderThumbProps> & SliderThumbProps, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & SliderThumbProps, import("@tamagui/core").StackStylePropsBase, {
-        elevation?: number | SizeTokens | undefined;
-        size?: SizeTokens | undefined;
-        fullscreen?: boolean | undefined;
-        circular?: boolean | undefined;
-        hoverTheme?: boolean | undefined;
-        pressTheme?: boolean | undefined;
-        focusTheme?: boolean | undefined;
-        elevate?: boolean | undefined;
-        bordered?: number | boolean | undefined;
-        unstyled?: boolean | undefined;
-        transparent?: boolean | undefined;
-        backgrounded?: boolean | undefined;
-        radiused?: boolean | undefined;
-        padded?: boolean | undefined;
-        chromeless?: boolean | "all" | undefined;
-    }, {}>>;
+        readonly size?: SizeTokens | undefined;
+        readonly unstyled?: boolean | undefined;
+    }, import("@tamagui/core").TamaguiComponent<{
+        __tamaDefer: true;
+    }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+        readonly backgrounded?: boolean | undefined;
+        readonly radiused?: boolean | undefined;
+        readonly hoverTheme?: boolean | undefined;
+        readonly pressTheme?: boolean | undefined;
+        readonly focusTheme?: boolean | undefined;
+        readonly circular?: boolean | undefined;
+        readonly padded?: boolean | undefined;
+        readonly elevate?: boolean | undefined;
+        readonly bordered?: number | boolean | undefined;
+        readonly transparent?: boolean | undefined;
+        readonly chromeless?: boolean | "all" | undefined;
+    }, import("@tamagui/core").TamaguiComponent<{
+        __tamaDefer: true;
+    }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+        readonly fullscreen?: boolean | undefined;
+        readonly elevation?: number | SizeTokens | undefined;
+    }, React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & void>> & React.RefAttributes<TamaguiElement>> & import("@tamagui/core").StaticComponentObject<{
+        __tamaDefer: true;
+    }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}> & Omit<{}, "staticConfig" | "extractable" | "styleable"> & {
+        __tama: [{
+            __tamaDefer: true;
+        }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}];
+    }>>>>;
 };
-declare const Track: React.ForwardRefExoticComponent<Omit<SliderTrackProps, "ref"> & React.RefAttributes<SliderTrackElement>>;
-declare const Range: React.ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}>> & React.RefAttributes<TamaguiElement> & Omit<import("@tamagui/core").StackProps, "size" | `$${string}` | `$${number}` | `$theme-${string}` | `$theme-${number}` | keyof import("@tamagui/core").StackStylePropsBase | "fullscreen" | keyof import("@tamagui/core").RNTamaguiViewNonStyleProps | keyof React.RefAttributes<TamaguiElement> | "orientation" | keyof import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & {
-    elevation?: number | SizeTokens | undefined;
-    size?: any;
-    fullscreen?: boolean | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-}>>>>, "ref"> & React.RefAttributes<View>>;
+declare const Track: React.ForwardRefExoticComponent<SliderTrackProps & React.RefAttributes<SliderTrackElement>>;
+declare const Range: React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & void & {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+} & {
+    readonly orientation?: "vertical" | "horizontal" | undefined;
+    readonly size?: any;
+}>> & React.RefAttributes<View>>;
 declare const Thumb: React.MemoExoticComponent<import("@tamagui/core").TamaguiComponent<Omit<{
     __tamaDefer: true;
 }, keyof SliderThumbProps> & SliderThumbProps, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & SliderThumbProps, import("@tamagui/core").StackStylePropsBase, {
-    elevation?: number | SizeTokens | undefined;
-    size?: SizeTokens | undefined;
-    fullscreen?: boolean | undefined;
-    circular?: boolean | undefined;
-    hoverTheme?: boolean | undefined;
-    pressTheme?: boolean | undefined;
-    focusTheme?: boolean | undefined;
-    elevate?: boolean | undefined;
-    bordered?: number | boolean | undefined;
-    unstyled?: boolean | undefined;
-    transparent?: boolean | undefined;
-    backgrounded?: boolean | undefined;
-    radiused?: boolean | undefined;
-    padded?: boolean | undefined;
-    chromeless?: boolean | "all" | undefined;
-}, {}>>;
+    readonly size?: SizeTokens | undefined;
+    readonly unstyled?: boolean | undefined;
+}, import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+    readonly backgrounded?: boolean | undefined;
+    readonly radiused?: boolean | undefined;
+    readonly hoverTheme?: boolean | undefined;
+    readonly pressTheme?: boolean | undefined;
+    readonly focusTheme?: boolean | undefined;
+    readonly circular?: boolean | undefined;
+    readonly padded?: boolean | undefined;
+    readonly elevate?: boolean | undefined;
+    readonly bordered?: number | boolean | undefined;
+    readonly transparent?: boolean | undefined;
+    readonly chromeless?: boolean | "all" | undefined;
+}, import("@tamagui/core").TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, {
+    readonly fullscreen?: boolean | undefined;
+    readonly elevation?: number | SizeTokens | undefined;
+}, React.ForwardRefExoticComponent<import("@tamagui/core").RNTamaguiViewNonStyleProps & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void> & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStylePropsBase & void>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStylePropsBase & void>> & React.RefAttributes<TamaguiElement>> & import("@tamagui/core").StaticComponentObject<{
+    __tamaDefer: true;
+}, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}> & Omit<{}, "staticConfig" | "extractable" | "styleable"> & {
+    __tama: [{
+        __tamaDefer: true;
+    }, TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStylePropsBase, void, {}];
+}>>>>;
 export { Slider, SliderTrack, SliderTrackActive, SliderThumb, Track, Range, Thumb, };
 export type { SliderProps, SliderTrackProps, SliderTrackActiveProps, SliderThumbProps };
 //# sourceMappingURL=Slider.d.ts.map

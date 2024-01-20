@@ -19,22 +19,24 @@ export declare const Stack: RNTamaguiView;
 export declare const Text: RNTamaguiText;
 export declare const X: TamaguiComponent<{
     __tamaDefer: true;
-}, TamaguiElement, StackNonStyleProps, StackStylePropsBase, {}, {}>;
+}, TamaguiElement, StackNonStyleProps, StackStylePropsBase, void, TamaguiComponent<StackProps, TamaguiElement, StackNonStyleProps, StackStylePropsBase, void, {}>>;
 export declare const Y: TamaguiComponent<{
     __tamaDefer: true;
 }, TamaguiElement, StackNonStyleProps, StackStylePropsBase, {
     abc?: boolean | undefined;
-}, {}>;
+}, TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, StackNonStyleProps, StackStylePropsBase, void, TamaguiComponent<StackProps, TamaguiElement, StackNonStyleProps, StackStylePropsBase, void, {}>>>;
 export declare const Z: TamaguiComponent<{
     __tamaDefer: true;
 }, TamaguiElement, StackNonStyleProps, StackStylePropsBase, {
     y?: boolean | undefined;
     abc?: boolean | undefined;
-}, {}>;
-export declare const YStack: TamaguiComponent<{
+}, TamaguiComponent<{
     __tamaDefer: true;
-}, TamaguiElement, RNTamaguiViewNonStyleProps, StackStylePropsBase, {
-    readonly fullscreen?: boolean | undefined;
-    readonly elevation?: number | import("@tamagui/web").SizeTokens | undefined;
-}, {}>;
+}, TamaguiElement, StackNonStyleProps, StackStylePropsBase, {
+    abc?: boolean | undefined;
+}, TamaguiComponent<{
+    __tamaDefer: true;
+}, TamaguiElement, StackNonStyleProps, StackStylePropsBase, void, TamaguiComponent<StackProps, TamaguiElement, StackNonStyleProps, StackStylePropsBase, void, {}>>>>;
 //# sourceMappingURL=index.d.ts.map

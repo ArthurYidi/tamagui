@@ -5,7 +5,6 @@ import type { GetRef } from './interfaces/GetRef'
 import { getReactNativeConfig } from './setupReactNative'
 import type {
   GetBaseStyles,
-  GetFinalProps,
   GetNonStyledProps,
   GetProps,
   GetStyledVariants,
@@ -20,7 +19,7 @@ import type {
 
 type AreVariantsUndefined<Variants> =
   // because we pass in the Generic variants which for some reason has this :)
-  Variants extends void ? true : false
+  Required<Variants> extends { _isEmpty: 1 } ? true : false
 
 type GetVariantAcceptedValues<V> = V extends Object
   ? {
@@ -32,7 +31,7 @@ type GetVariantAcceptedValues<V> = V extends Object
 
 export function styled<
   ParentComponent extends StylableComponent,
-  Variants extends VariantDefinitions<ParentComponent> | void = void,
+  Variants extends VariantDefinitions<ParentComponent>,
   StyledStaticConfig extends Partial<StaticConfig> = {},
 >(
   ComponentIn: ParentComponent,
@@ -58,12 +57,13 @@ export function styled<
     ? {}
     : GetVariantAcceptedValues<Variants>
 
-  type MergedVariants = AreVariantsUndefined<OurVariantProps> extends true
+  type MergedVariants = AreVariantsUndefined<Variants> extends true
     ? ParentVariants
     : AreVariantsUndefined<ParentVariants> extends true
-      ? OurVariantProps
+      ? Exclude<OurVariantProps, '_isEmpty'>
       : {
-          [Key in keyof ParentVariants | keyof OurVariantProps]?:
+          // exclude _isEmpty as it no longer is empty
+          [Key in Exclude<keyof ParentVariants | keyof OurVariantProps, '_isEmpty'>]?:
             | (Key extends keyof ParentVariants ? ParentVariants[Key] : undefined)
             | (Key extends keyof OurVariantProps ? OurVariantProps[Key] : undefined)
         }
@@ -85,6 +85,9 @@ export function styled<
    * so now pseudos wont be nicely typed inside media queries, but at least we can nest
    */
 
+  type z = { asdsa: 4 }
+  type a = z extends { asdsa?: 1 } ? true : false
+
   type StyledComponent = TamaguiComponent<
     ParentComponent extends { __tama: any }
       ? { __tamaDefer: true }
@@ -93,7 +96,7 @@ export function styled<
     ParentNonStyledProps,
     ParentStylesBase & CustomTokenProps,
     MergedVariants,
-    {}
+    ParentComponent
   >
 
   // validate not using a variant over an existing valid style

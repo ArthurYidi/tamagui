@@ -255,7 +255,14 @@ export const Text = WebText as any as RNTamaguiText
 
 // easily test type declaration output and if it gets messy:
 
-// export const X = styled(WebView, {})
+// export const X = styled(WebView, {
+//   // variants: {
+//   //   abc: {
+//   //     true: {
+//   //     },
+//   //   },
+//   // } as const,
+// })
 
 // export const Y = styled(X, {
 //   variants: {
@@ -265,15 +272,21 @@ export const Text = WebText as any as RNTamaguiText
 //   } as const,
 // })
 
-// const x = <Y abc />
-
 // export const Z = styled(Y, {
 //   variants: {
-//     y: {
+//     xxx: {
 //       true: {},
 //     },
 //   } as const,
 // })
+
+// export const A = styled(Z, {
+//   xxx
+
+//   variants: {} as const,
+// })
+
+// const zz = <A />
 
 // const variants = {
 //   fullscreen: {
