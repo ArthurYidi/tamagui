@@ -38,23 +38,32 @@ export const defaultStyles = {
   },
 } as const
 
-export const InputFrame = styled(TextInput, {
-  name: 'Input',
+export const InputFrame = styled(
+  TextInput,
+  {
+    name: 'Input',
 
-  variants: {
-    unstyled: {
-      false: defaultStyles,
+    variants: {
+      unstyled: {
+        false: defaultStyles,
+      },
+
+      size: {
+        '...size': inputSizeVariant,
+      },
+    } as const,
+
+    defaultVariants: {
+      unstyled: process.env.TAMAGUI_HEADLESS === '1' ? true : false,
     },
-
-    size: {
-      '...size': inputSizeVariant,
-    },
-  } as const,
-
-  defaultVariants: {
-    unstyled: process.env.TAMAGUI_HEADLESS === '1' ? true : false,
   },
-})
+  {
+    // TODO make types work with RN override
+    acceptTokens: {
+      placeholderTextColor: 'color',
+    },
+  }
+)
 
 export type Input = TextInput
 

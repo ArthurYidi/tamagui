@@ -1,16 +1,11 @@
-import { FontSizeTokens, GetProps, ReactComponentWithRef } from '@tamagui/web';
+import { GetProps, ReactComponentWithRef } from '@tamagui/web';
 import { View } from 'react-native';
 export declare const LabelFrame: import("@tamagui/web").TamaguiComponent<{
     __tamaDefer: true;
-}, import("@tamagui/web").TamaguiTextElement, import("@tamagui/web").TextNonStyleProps, import("@tamagui/web").TextStylePropsBase, Omit<{
-    readonly unstyled?: boolean | undefined;
-    readonly size?: (FontSizeTokens & import("@tamagui/web").SizeTokens) | undefined;
-}, "_isEmpty">, import("@tamagui/web").TamaguiComponent<{
-    __tamaDefer: true;
-}, import("@tamagui/web").TamaguiTextElement, import("@tamagui/web").TextNonStyleProps, import("@tamagui/web").TextStylePropsBase, Omit<{
-    readonly unstyled?: boolean | undefined;
-    readonly size?: FontSizeTokens | undefined;
-}, "_isEmpty">, import("@tamagui/web").TamaguiComponent<import("@tamagui/web").TextProps, import("@tamagui/web").TamaguiTextElement, import("@tamagui/web").TextNonStyleProps, import("@tamagui/web").TextStylePropsBase, void, {}>>>;
+}, import("@tamagui/web").TamaguiTextElement, import("@tamagui/web").TextNonStyleProps, import("@tamagui/web").TextStylePropsBase, {
+    size?: number | `$${string}` | `$${number}` | `$${string}.${string}` | `$${string}.${number}` | import("@tamagui/web").UnionableNumber | import("@tamagui/web").UnionableString | undefined;
+    unstyled?: boolean | undefined;
+}, {}>;
 export type LabelProps = GetProps<typeof LabelFrame> & {
     htmlFor?: string;
 };

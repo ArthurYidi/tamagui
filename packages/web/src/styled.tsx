@@ -11,22 +11,14 @@ import type {
   GetStyledVariants,
   GetVariantValues,
   StaticConfig,
+  StaticConfigPublic,
   StylableComponent,
   TamaguiComponent,
   ThemeValueByCategory,
   VariantDefinitions,
   VariantSpreadFunction,
 } from './types'
-
-type Expand<T> = T extends object
-  ? T extends infer O
-    ? { [K in keyof O]: O[K] }
-    : never
-  : T
-
-type UnionToIntersection<U> = Expand<
-  (U extends any ? (k: U) => void : never) extends (k: infer I) => void ? I : never
->
+import { View } from './views/View'
 
 type AreVariantsUndefined<Variants> =
   // because we pass in the Generic variants which for some reason has this :)
@@ -43,7 +35,7 @@ type GetVariantAcceptedValues<V> = V extends Object
 export function styled<
   ParentComponent extends StylableComponent,
   Variants extends VariantDefinitions<ParentComponent>,
-  StyledStaticConfig extends Partial<StaticConfig> = {},
+  StyledStaticConfig extends StaticConfigPublic = {},
 >(
   ComponentIn: ParentComponent,
   // this should be Partial<GetProps<ParentComponent>> but causes excessively deep type issues

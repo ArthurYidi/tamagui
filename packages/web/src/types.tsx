@@ -1468,7 +1468,7 @@ export interface ExtendBaseStackProps {}
 export interface ExtendBaseTextProps {}
 
 export interface StackStylePropsBase
-  extends Omit<ViewStyle, keyof OverrideNonStyledProps>,
+  extends Omit<ViewStyle, keyof OverrideNonStyledProps | 'elevation'>,
     TransformStyleProps,
     ExtraStyleProps,
     OverrideNonStyledProps {}
@@ -1562,9 +1562,9 @@ export type Styleable<
   MergedProps = CustomProps extends void
     ? Props
     : Omit<Props, keyof CustomProps> & CustomProps,
-  X extends FunctionComponent<MergedProps> = FunctionComponent<MergedProps>,
+  FunctionDef extends FunctionComponent<MergedProps> = FunctionComponent<MergedProps>,
 >(
-  a: X,
+  a: FunctionDef,
   options?: StyleableOptions
 ) => TamaguiComponent<
   MergedProps,
@@ -1680,7 +1680,9 @@ export type StaticComponentObject<
    * If you want your HOC of a styled() component to also be able to be styled(), you need this to wrap it.
    */
   styleable: Styleable<
-    Props,
+    Props extends { __tamaDefer: true }
+      ? GetFinalProps<NonStyledProps, BaseStyles & VariantProps>
+      : Props,
     Ref,
     NonStyledProps,
     BaseStyles,

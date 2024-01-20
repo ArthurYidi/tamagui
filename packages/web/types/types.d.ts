@@ -768,7 +768,7 @@ export interface ExtendBaseStackProps {
 }
 export interface ExtendBaseTextProps {
 }
-export interface StackStylePropsBase extends Omit<ViewStyle, keyof OverrideNonStyledProps>, TransformStyleProps, ExtraStyleProps, OverrideNonStyledProps {
+export interface StackStylePropsBase extends Omit<ViewStyle, keyof OverrideNonStyledProps | 'elevation'>, TransformStyleProps, ExtraStyleProps, OverrideNonStyledProps {
 }
 export interface TextStylePropsBase extends Omit<TextStyle, keyof OverrideNonStyledProps>, TransformStyleProps, ExtraStyleProps, OverrideNonStyledProps {
     ellipse?: boolean;
@@ -799,7 +799,7 @@ export type StyleableOptions = {
     disableTheme?: boolean;
     staticConfig?: Partial<StaticConfig>;
 };
-export type Styleable<Props, Ref, NonStyledProps, BaseStyles extends Object, VariantProps, ParentStaticProperties> = <CustomProps extends Object | void = void, MergedProps = CustomProps extends void ? Props : Omit<Props, keyof CustomProps> & CustomProps, X extends FunctionComponent<MergedProps> = FunctionComponent<MergedProps>>(a: X, options?: StyleableOptions) => TamaguiComponent<MergedProps, Ref, NonStyledProps & CustomProps, BaseStyles, VariantProps, ParentStaticProperties>;
+export type Styleable<Props, Ref, NonStyledProps, BaseStyles extends Object, VariantProps, ParentStaticProperties> = <CustomProps extends Object | void = void, MergedProps = CustomProps extends void ? Props : Omit<Props, keyof CustomProps> & CustomProps, FunctionDef extends FunctionComponent<MergedProps> = FunctionComponent<MergedProps>>(a: FunctionDef, options?: StyleableOptions) => TamaguiComponent<MergedProps, Ref, NonStyledProps & CustomProps, BaseStyles, VariantProps, ParentStaticProperties>;
 export type GetFinalProps<NonStyleProps, StylePropsBase> = Omit<NonStyleProps, keyof StylePropsBase> & (StylePropsBase extends Object ? WithThemeShorthandsPseudosMediaAnimation<StylePropsBase> : {});
 export type TamaguiComponent<Props = any, Ref = any, NonStyledProps = {}, BaseStyles extends Object = {}, VariantProps = {}, ParentStaticProperties = {}> = ForwardRefExoticComponent<(Props extends {
     __tamaDefer: true;
@@ -838,7 +838,9 @@ export type StaticComponentObject<Props, Ref, NonStyledProps, BaseStyles extends
     staticConfig: StaticConfig;
     /** @deprecated use `styleable` instead (same functionality, better name) */
     extractable: <X>(a: X, staticConfig?: Partial<StaticConfig>) => X;
-    styleable: Styleable<Props, Ref, NonStyledProps, BaseStyles, VariantProps, ParentStaticProperties>;
+    styleable: Styleable<Props extends {
+        __tamaDefer: true;
+    } ? GetFinalProps<NonStyledProps, BaseStyles & VariantProps> : Props, Ref, NonStyledProps, BaseStyles, VariantProps, ParentStaticProperties>;
 };
 export type TamaguiComponentExpectingVariants<Props = {}, Variants extends Object = {}> = TamaguiComponent<Props, any, any, Variants>;
 export type TamaguiProviderProps = Partial<Omit<ThemeProviderProps, 'children'>> & {
